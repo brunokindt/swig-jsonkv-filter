@@ -58,9 +58,9 @@ console.log(output);
 
 ```html
 <form class="login-form" role="form">
-    <input type="email" id="login" name="login_email" placeholder="Email" maxlength="254" />
-    <input type="password" id="password" name="login_password" placeholder="Password" />
-    <input type="submit" />
+  <input type="email" id="login" name="login_email" placeholder="Email" maxlength="254" >
+  <input type="password" id="password" name="login_password" placeholder="Password" >
+  <button type="submit" >Submit</button>
 </form>
 ```
 

@@ -27,7 +27,11 @@
   <body>
     <form class="login-form" role="form">
       {% for item in form %}
-        <input {{ item | jsonkv(['ignore']) | safe }} />
+        {% if item.type == "submit" %}
+        <button {{ item | jsonkv(['ignore']) | safe }} >Submit</button>
+        {% else %}
+        <input {{ item | jsonkv(['ignore']) | safe }} >
+        {% endif %}
       {% endfor %}
     </form>
   </body>

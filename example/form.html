@@ -1,0 +1,35 @@
+{% set form = [
+  {
+    type:"email",
+    id: "login",
+    name: "login_email",
+    placeholder: "Email",
+    maxlength: 254,
+    ignore: "me"
+  },
+  {
+    type:"password",
+    id: "password",
+    name: "login_password",
+    placeholder: "Password"
+  },
+  {
+    type:"submit"
+  }
+]%}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>title</title>
+  </head>
+  <body>
+    <form class="login-form" role="form">
+      {% for item in form %}
+        <input {{ item | jsonkv(['ignore']) | safe }} />
+      {% endfor %}
+    </form>
+  </body>
+</html>
+
